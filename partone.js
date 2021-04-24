@@ -7,7 +7,7 @@ const passwordList = data.map(input => input.split(": ")[1]);
 const requiredLetters = data.map(input => input.split(" ")[1].split(":")[0]);
 const letterRange = data.map(input => input.split(" ")[0].split("-"));
 
-// IIFE function that counts how many passwords meet the requirements
+// IIFE that counts how many passwords meet the requirements
 const parseData = (function(){
   let count = 0;
   // Loops through the array to check each password individually
@@ -17,7 +17,7 @@ const parseData = (function(){
     const currentMin = parseInt(letterRange[i][0]);
     const currentMax = parseInt(letterRange[i][1]);
     
-    // IIFE function that compares individual letters in each password to their required letters and acceptable range and adds to the count when it matches the requirements
+    // IIFE that compares individual letters in each password to their required letters and acceptable range and adds to the count when it matches the requirements
     const checkPasswords = (function(){
       let currentLetterCount = 0;
       for (let j = 0; j < currentPassword.length; j++){

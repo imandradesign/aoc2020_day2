@@ -7,7 +7,7 @@ const passwordList = data.map(input => input.split(": ")[1]);
 const requiredLetters = data.map(input => input.split(" ")[1].split(":")[0]);
 const letterIndices = data.map(input => input.split(" ")[0].split("-"));
 
-// IIFE function that counts how many passwords meet the requirements
+// IIFE that counts how many passwords meet the requirements
 const parseData = (function(){
   let count = 0;
   // Loops through the array to check each password individually
